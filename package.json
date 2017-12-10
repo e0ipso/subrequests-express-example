@@ -16,6 +16,9 @@
   "dependencies": {
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "subrequests": "^2.0.3",
+    "subrequests-express": "^1.6.0",
+    "subrequests-json-merger": "^1.4.0"
   }
 }
