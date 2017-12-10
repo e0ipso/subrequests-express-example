@@ -3,11 +3,16 @@ const app = express();
 const bodyParser = require('body-parser');
 const customers = require('./routes/customers');
 const users = require('./routes/users');
+const { subrequestsRouterFactory } = require('subrequests-express');
 
 app.use((req, res, next) => {
   res.set('Content-Type', 'application/json');
   next();
 });
+
+// Subrequests expects the body to be a string. Make sure we add it before the
+// body parser.
+app.use(subrequestsRouterFactory('/subrequests'));
 
 // start body-parser configuration
 app.use(

@@ -30,7 +30,7 @@ router.route('/user')
     });
   });
 
-router.route('/customer/:id')
+router.route('/user/:id')
   // rest api to get a single customer data
   .get((req, res) => {
     connection.query('select * from `user` where Id=?', [req.id], (error, results, fields) => {
